@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/resources/assets/backgronds/backgrond0.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/assets/backgronds/backgrond1.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/assets/backgronds/backgrond2.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/assets/backgronds/backgrond3.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/assets/backgronds/backgrond4.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/assets/backgronds/backgrond5.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/assets/textures/azuxulLogo.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/fr/azuxul/uhcimagestwiter/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/fr/azuxul/uhcimagestwiter/Panel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/fr/azuxul/uhcimagestwiter/Window.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
