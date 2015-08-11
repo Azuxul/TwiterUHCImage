@@ -8,12 +8,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Created by Azuxul on 09/08/2015.
+ * Window constructor class
+ *
+ * @author Azuxul
+ * @version 1.0
  */
 public class Window {
 
-    private JFrame frame;
-    private JPanel panel;
+    private final JFrame frame;
+    private final JPanel panel;
     public JButton buttonSave;
     public JFormattedTextField textName;
     public JFormattedTextField textTeam;
@@ -31,6 +34,13 @@ public class Window {
     public JLabel labelOpen;
     public JLabel labelCredits;
 
+    /**
+     * Window constructor
+     *
+     * @param HEIGHT Window height
+     * @param WEIGHT Window weight
+     * @param TITLE Window title
+     */
     public Window(int HEIGHT, int WEIGHT, String TITLE){
 
         frame = new JFrame(TITLE);
@@ -50,12 +60,18 @@ public class Window {
 
     }
 
+    /**
+     * Update JPanel
+     */
     public void update(){
 
         frame.validate();
         frame.repaint();
     }
 
+    /**
+     * Add components to window
+     */
     private void addComponent() {
 
         ActionListener listenerSave = new ActionListener() {
@@ -63,24 +79,6 @@ public class Window {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Main.save = true;
-                update();
-            }
-
-        };
-
-        ActionListener listenerReset = new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Main.save = false;
-                Main.backgrondIndex = -1;
-                textName.setText("");
-                textTeam.setText("");
-                textDate.setText("");
-                textSc.setText("");
-                textIp.setText("");
-                textStart.setText("");
-                textOpen.setText("");
                 update();
             }
 

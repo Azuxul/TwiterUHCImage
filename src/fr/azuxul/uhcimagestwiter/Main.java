@@ -6,7 +6,10 @@ import java.nio.charset.Charset;
 import java.util.logging.Logger;
 
 /**
- * Created by Azuxul on 09/08/2015.
+ * Main class
+ *
+ * @author Azuxul
+ * @version 1.0
  */
 public class Main {
 
@@ -39,6 +42,11 @@ public class Main {
         Logger.getLogger("TwiterUHCImage").info("Starting complete !");
     }
 
+    /**
+     * Return main window
+     *
+     * @return window
+     */
     public static Window getWindow(){
 
         return window;

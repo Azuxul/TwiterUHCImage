@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/resources/assets/backgronds/backgrond0.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/resources/assets/backgronds/backgrond1.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/resources/assets/backgronds/backgrond2.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/resources/assets/backgronds/backgrond3.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/resources/assets/backgronds/backgrond4.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/resources/assets/backgronds/backgrond5.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/assets/backgrounds/background0.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/assets/backgrounds/background1.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/assets/backgrounds/background2.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/assets/backgrounds/background3.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/assets/backgrounds/background4.png" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/resources/assets/backgrounds/background5.png" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/resources/assets/textures/azuxulLogo.png" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/src/fr/azuxul/uhcimagestwiter/Main.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/fr/azuxul/uhcimagestwiter/Panel.java" charset="UTF-8" />

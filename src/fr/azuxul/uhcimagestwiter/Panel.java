@@ -12,10 +12,19 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by Azuxul on 09/08/2015.
+ * Panel contain images for window
+ *
+ * @author Azuxul
+ * @version 1.0
  */
 public class Panel extends JPanel {
 
+    /**
+     * Paint images(logo and twiter image)
+     * If Main.save save twiter image
+     *
+     * @param g Graphics for print images
+     */
     public void paintComponent(Graphics g){
 
         Image img = null;
@@ -36,11 +45,11 @@ public class Panel extends JPanel {
 
         if(Main.backgrondIndex <= -1){
 
-            Main.backgrondIndex = new Random().nextInt(Backgrond.values().length);
+            Main.backgrondIndex = new Random().nextInt(Background.values().length);
         }
 
         try {
-            img = ImageIO.read(Main.class.getResource(Backgrond.values()[Main.backgrondIndex].getPath()));
+            img = ImageIO.read(Main.class.getResource(Background.values()[Main.backgrondIndex].getPath()));
             logo = ImageIO.read(Main.class.getResource("/assets/textures/azuxulLogo.png"));
         } catch (IOException e) {
             e.printStackTrace();
@@ -101,7 +110,7 @@ public class Panel extends JPanel {
                 @Override
                 public boolean accept(File f) {
                     try {
-                        return f.getName().substring((int) (f.getName().length() - 4)).equalsIgnoreCase(".png");
+                        return f.getName().substring(f.getName().length() - 4).equalsIgnoreCase(".png");
                     } catch (Exception e) {
                         return false;
                     }
