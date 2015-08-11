@@ -110,7 +110,7 @@ public class Panel extends JPanel {
                 @Override
                 public boolean accept(File f) {
                     try {
-                        return f.getName().substring(f.getName().length() - 4).equalsIgnoreCase(".png");
+                        return f.isDirectory() || f.getName().substring(f.getName().length() - 4).equalsIgnoreCase(".png") || f.getName().substring(f.getName().length() - 4).equalsIgnoreCase(".lnk");
                     } catch (Exception e) {
                         return false;
                     }
@@ -121,14 +121,17 @@ public class Panel extends JPanel {
                     return "Image png (.png)";
                 }
             });
-            fileChooser.showSaveDialog(this);
+            int r = fileChooser.showSaveDialog(this);
 
-            try {
-                ImageIO.write(bufferedImage, "PNG", fileChooser.getSelectedFile());
-            } catch (IOException e) {
-                e.printStackTrace();
+            if(r == JFileChooser.APPROVE_OPTION){
+
+                try {
+                    ImageIO.write(bufferedImage, "PNG", fileChooser.getSelectedFile());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
             }
-
             Main.save = false;
         }
     }
