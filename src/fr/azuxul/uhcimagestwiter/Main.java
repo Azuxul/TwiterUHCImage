@@ -1,6 +1,8 @@
 package fr.azuxul.uhcimagestwiter;
 
 import javax.swing.*;
+import java.lang.reflect.Field;
+import java.nio.charset.Charset;
 import java.util.logging.Logger;
 
 /**
@@ -18,6 +20,16 @@ public class Main {
     }
 
     public Main(){
+
+        System.setProperty("file.encoding","UTF-8");
+        try {
+            Field charset;
+            charset = Charset.class.getDeclaredField("defaultCharset");
+            charset.setAccessible(true);
+            charset.set(null,null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
