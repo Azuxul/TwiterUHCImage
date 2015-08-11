@@ -74,9 +74,14 @@ public class Window {
      */
     private void addComponent() {
 
-        ActionListener listenerSave = e -> {
-            Main.save = true;
-            update();
+        ActionListener listenerSave = new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Main.save = true;
+                update();
+            }
+
         };
 
         buttonSave = new JButton("Export file as .png");
