@@ -69,7 +69,6 @@ public class Panel extends JPanel {
 
             for(Integer i:charI){
                 if(i <= 34 && i > mI){
-
                     mI = i;
                 }
             }
