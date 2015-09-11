@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 public class Main {
 
     public static boolean save = false;
-    public static int backgrondIndex = -1;
+    public static int backgroundIndex = -1;
     private static Window window;
 
     public static void main(String[] args){

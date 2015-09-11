@@ -15,7 +15,7 @@ import java.util.Random;
  * Panel contain images for window
  *
  * @author Azuxul
- * @version 1.0
+ * @version 1.1
  */
 public class Panel extends JPanel {
 
@@ -43,39 +43,34 @@ public class Panel extends JPanel {
         }
         catch (Exception ignored){}
 
-        if(Main.backgrondIndex <= -1){
+        if(Main.backgroundIndex <= -1){
 
-            Main.backgrondIndex = new Random().nextInt(Background.values().length);
+            Main.backgroundIndex = new Random().nextInt(Background.values().length);
         }
 
         try {
-            img = ImageIO.read(Main.class.getResource(Background.values()[Main.backgrondIndex].getPath()));
+            img = ImageIO.read(Main.class.getResource(Background.values()[Main.backgroundIndex].getPath()));
             logo = ImageIO.read(Main.class.getResource("/assets/textures/azuxulLogo.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        if(sc1.length() >= 33){
+        // Separate string to two strings if is to long
+        if(sc1.length() >= 30){
 
-            List<Integer> charI = new ArrayList<>();
-            int mI = 0;
+            List<Integer> indexForPossibleStringCut = new ArrayList<>();
+            int cutIndex = 0;
 
-            for(int i = sc1.length() - 1; i >= 0; i--){
+            for(int i = sc1.length() - 1; i >= 0; i--)
+                if(sc1.charAt(i) == '-' || sc1.charAt(i) == ' ' || sc1.charAt(i) == '/')
+                    indexForPossibleStringCut.add(i);
 
-                if(sc1.charAt(i) == '-'){
-                    charI.add(i);
-                }
-            }
+            for(Integer i:indexForPossibleStringCut)
+                if(i <= 31 && i > cutIndex)
+                    cutIndex = i;
 
-            for(Integer i:charI){
-                if(i <= 34 && i > mI){
-
-                    mI = i;
-                }
-            }
-
-            sc2 = sc1.substring(mI + 1, sc1.length());
-            sc1 = sc1.substring(0, mI + 1);
+            sc2 = sc1.substring(cutIndex + 1, sc1.length());
+            sc1 = sc1.substring(0, cutIndex + 1);
         }
 
         BufferedImage bufferedImage = new BufferedImage(440, 220, BufferedImage.TYPE_INT_ARGB);
@@ -91,7 +86,7 @@ public class Panel extends JPanel {
         g2D.drawString("Azuxul", 390, 205);
         g2D.setFont(new Font(g2D.getFont().getName(), g2D.getFont().getStyle(), 18));
         g2D.drawString(name + " " + team + " - " + date, 25, 35);
-        g2D.drawString("- Scénarios: " +  sc1 , 25, 80); //Max char 34
+        g2D.drawString("- Scénarios: " +  sc1 , 25, 80); //Max char 30
         g2D.drawString(sc2, 25, 105);
         g2D.drawString("- Ip: " + ip, 25, 130);
         g2D.drawString("- Ouverture: " + open, 25, 155);

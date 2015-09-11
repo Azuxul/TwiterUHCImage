@@ -99,7 +99,7 @@ public class Window {
         labelIP = new JLabel("Ip:");
         labelOpen = new JLabel("Ouverture :");
         labelStart = new JLabel("Start :");
-        labelCredits = new JLabel("http://azuxul.free.fr/ \t - \t https://github.com/Azuxul/ \t - \t @Azuxul");
+        labelCredits = new JLabel("http://azuxul.fr/ \t - \t https://github.com/Azuxul/ \t - \t @Azuxul");
 
         int defaultX = ((frame.getWidth() - 440) / 10) + 440;
 
